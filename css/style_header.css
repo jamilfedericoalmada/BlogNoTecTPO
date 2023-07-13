@@ -1,0 +1,216 @@
+/* Estilos del encabezado */
+header {
+  grid-area: header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 84px;
+  background: #fff;
+  box-shadow: 0 10px 20px -22px black;
+  z-index: 2;
+
+}
+header .imglogo {
+     width: 200px;
+     height: auto;
+     /* overflow: hidden; */
+     margin: 10px;
+     padding-left: 5px; 
+  }
+  .lgzoom{
+    width: 100%;
+    height: 90%;
+    transition: 0.5s;
+    object-fit: cover;
+  }
+  .lgzoom:hover{
+    transform: scale(1.2);
+  }
+
+header h1 {
+    margin: 0;
+  }
+  .header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1em;
+    
+  }
+  
+  .logo h1 b {
+    color: #46a2fd;
+  }
+  .logo h1{
+    font-size: 45px;
+    font-weight:bolder;
+  }
+  .menu {
+    height: 80px;
+  }
+  
+  .menu nav {
+    height: 100%;
+  }
+  
+  .menu nav ul {
+    height: 100%;
+    display: flex;
+    list-style: none;
+  }
+  
+  .menu nav ul li {
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .menu nav ul li.ocultar{
+    display: none;
+  }
+  .menu-selected:before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #46a2fd;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .menu nav ul li a {
+    color: #777777;
+    font-size: 18px;
+    transition: color 300ms;
+  }
+  
+  .menu nav ul li a:hover {
+    color: #46a2fd;
+  }
+  
+  .menu .text-menu-selected {
+    color: #46a2fd;
+  }
+  
+  header {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  header.hide {
+    transform: translateY(-100%);
+  }
+  #menuH, #menu-check {
+    display: none;
+  }
+  
+  @media screen and (max-width: 640px) {
+    /* header .imglogo{
+      display:none;
+    } */
+    .menu.hide {
+      display: none;
+    }
+    .menu nav ul li {
+      height: 100%;
+      margin: 0px 20px;
+      display: flexbox;
+      justify-content:baseline;
+      align-items:center;
+      position: relative;
+    }
+    header div.menu{
+      display: flex;
+      place-content: space-between;
+    }
+    #menu-check:not(:checked) ~ div.menu nav {/*////////////////////////////////////*/
+      display: none;
+    }
+    #menu-check:checked ~ div.menu nav {
+      display: block;
+    }
+
+    #menuH {
+      display: block;
+      color: #46a2fd;
+      background-color: white;
+      font-size: 1.8em;
+      font-weight: bold;
+      border: 2px solid #46a2fd86;
+      border-radius: 0.3em;
+      position: absolute;
+      right: 0.5em;
+      top: 0.5em;
+      max-height: 800px;
+      transition: 0.8s;
+      z-index: 9999;
+    }
+    #menuH:hover{
+      color:white;/*#2c649c*/
+      background-color: #46a2fd;
+    }
+    #menuH-cerrar{
+      display: none;
+    }
+    #menu-check:checked ~ label #menuH-abrir {
+      display: none;
+    }
+    #menu-check:checked ~ label #menuH-cerrar {
+      display: block;
+    }
+    .menu-selected:before {
+      background: none;
+      
+    }
+    .menu .text-menu-selected {
+      color: white;
+      font-weight: bold;
+    }
+    
+    header div.header-content div.menu nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 0.7em;
+      padding-top: 2em;
+      padding-right: 1.5em;
+      color: white;
+    }
+    
+    header div.header-content div.menu nav ul li {
+      height: 110%;
+      width: 200px;
+      text-align: center;
+      padding-right: 30px;
+      top:-25px;
+      left: 50px;
+      background-color:rgb(0, 0, 0);
+      opacity: 0.8;
+      transition: 0.8s;
+    }
+    
+    header div.menu nav ul a {
+      color: white;
+    }
+    header div.menu nav ul, header div.menu nav ul li {
+      display: block;
+      text-align: right;
+    }
+    .menu nav ul li.ocultar{
+      display:block;
+      border-top-left-radius: 1em;
+    }
+    .menu nav ul li.ult{
+      border-bottom-left-radius: 1em;
+    }
+  }

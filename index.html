@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noTec</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_header.css">
+</head>
+
+<body class="contenedorBody">
+    <!--Header -Menu-->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="imglogo">
+                    <a href="index.html">
+                        <img src="notec_logo.svg" alt="logo notec" class="lgzoom ">
+                    </a>
+                </div>
+                <!-- <h1><a href="index.html" class="t2_a hover3"> no<b>T</b>ec</a></h1> -->
+            </div>
+            <input type="checkbox" id="menu-check">
+            <label id="menuH" for="menu-check">
+                <span id="menuH-abrir">&#9776;</span>
+                <span id="menuH-cerrar">X</span>
+            </label>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li class="ocultar"></li>
+                        <li class="menu-selected"><a href="#" class="text-menu-selected"
+                                style="text-decoration: none;">Inicio</a></li>
+                            <li><a href="#blog" style="text-decoration: none;">Blog</a></li>
+                            <li><a href="#" style="text-decoration: none;">Tutoriales</a></li>
+                        <li class="ult"><a href="contact/contact.html" style="text-decoration: none;">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>      
+       
+        <!--Portada-->
+    <div class="container-cover portada" id="jump1">
+            <div class="container-info-cover">
+                <h1>Blog de tecnología</h1>
+                <p>últimas novedades sobre tecnología e informática</p>
+            </div>
+        </div>
+    <!-- carousel -->
+    <div class="carrusel" id="jump2">
+        <div class="mySlides">
+            <a href="articles/art_carousel_1.html"><img src="img/cpu.jpg" alt="imagen-1"></a>
+            <div class="texto-superpuesto">
+                <h2><a href="articles/art_carousel_1.html" class="t1_a hover2">AMD presenta su nueva línea de
+                        procesadores</a></h2>
+                <p class="texto-responsive">La compañía de tecnología AMD ha lanzado al mercado su nueva línea de procesadores, que prometen
+                    ser más rápidos y eficientes que sus predecesores. Uno de los modelos más destacados es el que
+                    se muestra en la imagen, con un diseño renovado y mejoras en su capacidad de procesamiento.</p>
+            </div>
+        </div>
+        <div class="mySlides">
+            <a href="articles/art_carousel_2.html"><img src="img/developer.jpg" alt=""></a>
+            <div class="texto-superpuesto">
+                <h2><a href="articles/art_carousel_2.html" class="t1_a hover2">Las ventajas de programar desde
+                        casa</a></h2>
+                <p class="texto-responsive">En la actualidad, muchas personas están optando por trabajar desde casa, y la programación es una
+                    de las áreas en las que esta tendencia es especialmente fuerte. Programar desde la comodidad de
+                    tu habitación puede tener muchas ventajas.</p>
+            </div>
+        </div>
+        <div class="mySlides">
+            <a href="articles/art_carousel_3.html"><img src="img/mother-cpu.jpg" alt=""></a>
+            <div class="texto-superpuesto">
+                <h2><a href="articles/art_carousel_3.html" class="t1_a hover2">Cómo instalar un procesador Ryzen en
+                        tu computadora</a></h2>
+                <p class="texto-responsive">Si estás buscando mejorar el rendimiento de tu computadora, una de las mejores formas de hacerlo
+                    es actualizar el procesador. El Ryzen es una excelente opción para aquellos que buscan velocidad
+                    y eficiencia, y en esta imagen puedes ver cómo se instala en una motherboard.</p>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="elements">
+            <span class="quadrate" onclick="currentSlide(1)"></span>
+            <span class="quadrate" onclick="currentSlide(2)"></span>
+            <span class="quadrate" onclick="currentSlide(3)"></span>
+        </div>
+
+    </div>
+    <!-- main -->
+    <main class="main" id="blog">
+        <article class="contenedorArticle">
+            <div class="texto">
+                <h2><a href="articles/article_1.html" class="t2_a hover2">La importancia de la tecnología en el trabajo
+                        remoto</a></h2>
+                <p>
+                    En la actualidad, el trabajo remoto se ha convertido en una opción cada vez más popular para muchas
+                    personas, y la tecnología juega un papel fundamental en esto.
+                    Una de las principales ventajas de la tecnología en el trabajo remoto es la capacidad de acceder a
+                    herramientas y recursos de trabajo en línea.
+            </div>
+
+            <div class="img">
+                <a href="articles/article_1.html"><img src="img/pc_claro.jpg" alt="Imagen pc_1"></a>
+            </div>
+
+        </article>
+
+        <article class="contenedorArticle">
+            <div class="texto">
+                <h2><a href="articles/article_2.html" class="t2_a hover2">Cómo encontrar el equilibrio entre trabajo y
+                        descanso para los programadores</a></h2>
+                <p>
+                    A menudo, los programadores se enfrentan a una carga de trabajo intensa que puede resultar en largas
+                    horas laborales y poco tiempo libre. Sin embargo, encontrar un equilibrio adecuado entre el trabajo
+                    y el descanso es esencial para mantener la productividad y evitar la fatiga mental y física.
+                </p>
+            </div>
+
+            <div class="img"><a href="articles/article_2.html">
+                    <img src="img/pc_osc.jpg" alt="Imagen pc_2"></a>
+            </div>
+
+
+        </article>
+
+        <article class="contenedorArticle">
+            <div class="texto">
+                <h2><a href="articles/article_3.html" class="t2_a hover2">Soldar componentes electrónicos en un
+                        chipset</a></h2>
+                <p>
+                    Soldar componentes electrónicos en un chipset puede parecer una tarea desalentadora para muchos. Sin
+                    embargo, con las herramientas y
+                    técnicas adecuadas, es posible realizar esta tarea de manera efectiva y segura. Es importante
+                    asegurarse de que se tienen las herramientas adecuadas, incluyendo un soldador de estaño, soldadura,
+                    una esponja húmeda y pinzas.
+                </p>
+            </div>
+
+            <div class="img">
+                <a href="articles/article_3.html"><img src="img/placa.jpg" alt="Imagen placa"></a>
+            </div>
+
+        </article>
+        <article class="contenedorArticle">
+            <div class="texto">
+                <h2><a href="articles/article_4.html" class="t2_a hover2">La importancia de elegir el teclado adecuado
+                        para programar</a></h2>
+                <p>
+                    El teclado es una herramienta esencial para cualquier programador, ya que es la principal forma de
+                    ingresar código y comandos. Aunque pueda parecer un detalle menor, elegir el teclado adecuado puede
+                    marcar la diferencia en cuanto a la comodidad, la eficiencia y la precisión en el trabajo.
+                </p>
+            </div>
+
+            <div class="img">
+                <a href="articles/article_4.html"><img src="img/keyboard.jpg" alt="Imagen teclado"></a>
+            </div>
+
+        </article>
+        <article class="contenedorArticle">
+            <div class="texto">
+                <h2><a href="articles/article_5.html" class="t2_a hover2">El impacto de la inteligencia artificial en
+                        nuestras vidas</a></h2>
+                <p>
+                    La inteligencia artificial ha sido una de las tecnologías más innovadoras de las últimas décadas.
+                    Desde los asistentes virtuales hasta los vehículos autónomos, la inteligencia artificial ha
+                    revolucionado la forma en que interactuamos con la tecnología y entre nosotros.
+                </p>
+            </div>
+
+            <div class="img">
+                <a href="articles/article_5.html"><img src="img/robot.jpg" alt="Imagen robot"></a>
+            </div>
+
+        </article>
+    </main>
+    <!-- footer -->
+    <footer>
+        <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        <a href="contact/contact.html">Contacto</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/97e4681e3a.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        setInterval(function(){ 
+            document.getElementsByClassName("next")[0].click();
+        },5000);
+        // setTimeout(function(){ 
+        //     document.getElementById("jump1").style.visibility = "hidden";
+        // },3000);
+    </script>
+</body>
+</html>

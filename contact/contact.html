@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoTec</title>
+  <link rel="stylesheet" href="../css/style_form.css">
+  <link rel="stylesheet" href="../css/style_header.css">
+</head>
+
+<body class="contenedorBody">
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <div class="imglogo">
+          <a href="../index.html">
+              <img src="../notec_logo.svg" alt="logo notec" class="lgzoom ">
+          </a>
+        </div>
+          <!-- <h1><a href="../index.html" class="t2_a hover3"> no<b>T</b>ec</a></h1> -->
+      </div>
+      <input type="checkbox" id="menu-check">
+            <label id="menuH" for="menu-check">
+                <span id="menuH-abrir">&#9776;</span>
+                <span id="menuH-cerrar">X</span>
+            </label>
+      <div class="menu">
+          <nav>
+              <ul>
+                  <li class="ocultar"></li>
+                  <li><a href="../index.html" style="text-decoration: none;">Inicio</a></li>
+                  <li><a href="../index.html #blog" style="text-decoration: none;">Blog</a></li>
+                  <li><a href="#" style="text-decoration: none;">Tutoriales</a></li>
+                  <li class="menu-selected ult"><a href="#" class="text-menu-selected" style="text-decoration: none;">Contacto</a></li>
+              </ul>
+          </nav>
+      </div>
+   </div>
+  </header>
+  <main class="main">
+    <section class="contact">
+      <div class="u-wrapper">
+        <div class="contact-content">
+          <form id="form" class="form" action="https://formspree.io/f/mgebqdgk" method="POST">
+            <h3 class="tag"><span>HABLEMOS</span></h3>
+            <label for="name">Nombre Completo <span>*</span></label>
+            <input name="name" required type="text" id="name" placeholder="Juan">
+            <label for="email">Correo electrónico <span>*</span></label>
+            <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+            <button type="submit" class="btn primary full">enviar mensaje</button>
+          </form>
+          <a href="mailto:jamilcommandline@gmail.com" id="Blogdetec"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+    <a href="https://github.com" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+    <a href="#">Contacto</a>
+  </footer>
+  <script>
+    const $form = document.querySelector('#form')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    async function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      const response = await fetch(this.action, {
+        method: this.method,
+        body: form,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      if (response.ok) {
+        this.reset()
+        alert('Gracias por contactar con NoTec te escribiremos pronto :)')
+      }
+    }
+  </script>
+  <script src="../script.js"></script>
+  <script src="https://kit.fontawesome.com/97e4681e3a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
